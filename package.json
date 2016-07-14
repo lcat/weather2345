@@ -1,0 +1,33 @@
+{
+  "name": "weather2345",
+  "version": "0.1.1",
+  "description": "node weather cli",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lcat/weather2345.git"
+  },
+  "keywords": [
+    "weather",
+    "nodejs"
+  ],
+  "bin": {
+    "weather": "./bin/weather.js"
+  },
+  "author": "lcat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lcat/weather2345/issues"
+  },
+  "homepage": "https://github.com/lcat/weather2345#readme",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "commander": "^2.9.0",
+    "moment": "^2.14.1",
+    "request": "^2.73.0",
+    "term-grid": "^0.1.8"
+  }
+}
