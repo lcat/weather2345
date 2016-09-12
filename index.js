@@ -48,7 +48,7 @@ var getDataByAddress = function(address) {
         }
       } else {
         console.log();
-        console.log('无相关地址，请重试'.red);
+        console.log('~> '.red + '无相关地址，请重试'.red);
         console.log();
       }
     })
@@ -76,8 +76,9 @@ var getDataByDefault = function() {
 }
 
 var setDefaultAddress = function(val) {
+  val = val && val.trim();
   if (!val) {
-    console.log('~> '.green + '未收到任何参数，你让我设置个鬼');
+    console.log('~> '.green + '未收到任何参数，你让我设置个鬼'.red);
     return;
   }
   // fs.open('./setting.txt', val);
@@ -85,7 +86,8 @@ var setDefaultAddress = function(val) {
     var buf = new Buffer(val);
     fs.write(fd, buf, 0, buf.length, 0, function(err,written,buffer){});
     console.log();
-    console.log('~> '.green + '设置成功，直接执行');
+    console.log('~> '.green + '设置成功，直接执行'.green);
+    console.log();
     console.log('   ' + '$ weather'.cyan);
     console.log();
   })
@@ -199,7 +201,8 @@ var renderForecast = function(data) {
   grid.draw();
 
   console.log();
-  console.log(colors.cyan(data.result.hourly.description) + '。'.cyan + colors.cyan(data.result.minutely.description));
+  console.log(colors.cyan(data.result.minutely.description));
+  console.log(colors.cyan(data.result.hourly.description));
   console.log();
   console.log(colors.dim('数据来源：百度地图、彩云天气'));
   console.log();

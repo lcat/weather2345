@@ -1,6 +1,6 @@
 {
   "name": "weather2345",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "node weather cli",
   "main": "index.js",
   "scripts": {
